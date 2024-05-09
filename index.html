@@ -1,125 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./SCSS files/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./SCSS files/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
-<!-- NAVBAR START -->
+  </head>
+  <body>
+    <!-- NAVBAR START -->
     <nav class="nav">
-        <div id="inner-nav">
-            <ul class="nav-ul-1">
-                <li><img width="27px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAT1JREFUWEft1s8qRVEUx/HP9QAyk4F/r4CMjUyUifIMksLI1FgMJMkbKE8gTyCUJxBGlDAwU3JvuXXv7h5nn8692oO9h2uvs37f81vrnL0bEluNxHhkoLKO9NOhISxhFt94xxtecVEG0t7vF9AyDjFVIBytE534xxtu4KjEgWid6MQCwRncRrQjWic6sUD0GOspAV1hPgC6bg70Jm7wFQHblVLXoXtMB6JzkW3syVoX6BETQeUxPFd1pl+f/RPGM1CHA7uBG9sYDmIH+OyIveAktoVVZqiV2zoSqq5LLMY+9B9Ap80hX0sJaAd7KQGt4nwQQK2aC0Hhs+bAjgaxld9rRzt8h49BAYV1HzCZ0n8oA5W1PjuUHapydPRyK89QnqG6M7SFkcDG/eCCVuZy135doEpiMckZqMyl5Bz6AfsnPSV91uyVAAAAAElFTkSuQmCC"/></li>
-                <li><img width="27px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnRJREFUWEftlkuIjlEYx3/jtplcYjYKkctkN9KQhVBSSGFG0rAyU6SUQiEm5JbLUhZkYSMLScx27EhS00hNIqbJhrCRlMucfz1vTd+c9z3njPfNLL5TX99X3znP+Z3/c21gnK2GccZDHSjkkbpC/0OhxcBBYBWwFOgHngG37HfGNAlYArweCelz2UxgLXA/9BrP/yeAbmByztkO4BWwDjgAbAEGQkCHgMvAduBhAtRu4E7C/gsGP9Up+iU751PoHrAD+A1sBR5FXNIEvAFmROzVll7gq3PjXFPrexGQVJGUWn+Aa+77FPCj4LKdwN1ImGzbJ4uztyGXHXcxcK7G+CAgVz4wyNq75eLDCUCCWA+8rz3jc9kaF9RPcox/BG7bZ+TLbgJ7E4COAFd8+31AEwDFUVvgAkkuKH0WASsTgLoAPWLU8gFtAJ5b2is9q1ibgZ5YIKmzDfjg0nhhFTQuFlvcHX2xQJeAoxWByKxSfLqVlSiXif4lVDaaqAPkxmdetz/jXnCyIpU6ra95zReNH8oEpea0EsG+ueyaY25LBtoITAFUhXeVBHXWqn6uuSKFlgMvSgLJgnk+8LnIZmhivA7sLwlKKgf7XQhI/1+1PvYvXDdiHxYCyiBaAc07y4DViWSPLc1/xpyLBZoI7HO16TQwK8aw7ZGL9gC/Ys8UAWnmnWdl/jzQHGvUTYJ/XYbqjGqZfkevWqBN1jYWWL1Q509d6oEK4KepB7Xfp5CUOOaG8XY3WzcmGNXwrrZwMTBdFposcpmKosYPzTkrANWQ2QapSe+dTXzq2grcoQT4MRXGMuwn24jNsmTDYz1QBwopV1copNAwPqtfJYPlU7sAAAAASUVORK5CYII="/></li>
-                <li><img width="27px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA5hJREFUWEftl1moTmEUhp9jDLkhY5RkJlNJpAyRKbkwS5JQppKhkHmIEJIhUxKZiVKEkDKFzFMoRRQukczfq7X1+c7+996/38W5sOp0zv/t9a39nrXe9a71F1HCrKiE4eE/oLSK5JOhFkAboB5QOi2wPf8GPAduAvey3MkCaBiwCGiQJWCCzxNgDnAgKU4SoFrATqBHgUDC66dd1kYBr+LiJgE6CfS0S5eAHcANS/2XjCDLA62A9sAEoIndOwH0yQfQAOCQXZgNLMsIIMmtHLAWGG9OA4HD4YVcGVK9xRnVe0gBYLoCw4EawHHL8nWgJfDYy9jvV8QBagbcN4/OwIUCAE0E1gdlGgHssrO6wEs/fhwgv1xKcy6+VAamAR2A1sAP4BZwBVgJfLDs7rMXqkFEZmVeFZD1s8wlZkg13gi8A6rlyE5368DaOZ6/AEYC511pJBvVLetnHNhKwHu7pwzqXYmAZgArgKdAw5gXdgHOeedngTtAGcc5lbub96yTk42LQQxV5budzQKWpwGaa0J418jn+6tMD4A6lkERVrrim6RiD1DFVLo58DHw+WpqP8/9XpwGaIHjw3xA3dAuCDQG2Gpn0hHpSZyppQ/aA5UuInHkK14qo5kALTRHkVOE9W07MNoJ5mWgYw4w0bHml8i+yUTRd//ktE2imQmQ5pbKdtsC+oEemnaolSenANoCjM0RRx1Y0aihavy2uLaPSvYIaBq8VGeNXfdtcByalAJos5tX44xz4pFv6jJ1m/ijLGUCJPKGgfYCQ01rwnKG+KRJmmPij3jkm0hewR3onxdF/hrQTG+uFRM1L+5gl9399nkqsCYA9Bkoa9RYkgZINRXyuJLVtGlfFXjrtEpj4FTwst5OjXdb27826ZDIRlbKAdHiJis2uOM4JKelwLMcS1mvoN2ThFEi6YuoQIjMIrVMo2d1Wob+9egIueWPDu1IkoVEDvV37X7UhqW0Imm4asxo+dKurXEQDtcQjD7Xt+zrbw3yI2mAtNVJb2SFrh9xgPz1Q18colXnl2/agibCRmtsXPB8zzQurpngvrHF7Y8YuQD19fYU6YR+tO8UYuEKG7saJy35Wl8HGYKrbsJvsyVfW4CmdRaLlnwN6Sle1ypG27g4SYDUnqu8pTwLgCw+2gLUXb42JXZZGFQcWud2nEZZ3pbgo4VvuuvIY0lxsnxzje6XmK/SBSYmv+v5ZCi/yH/p/R9QWuJ+ArGquSWsrGisAAAAAElFTkSuQmCC"/></li>
-                <li><img width="27px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAiBJREFUWEft18vLTVEYx/HP6xpyn7gkoTBhIjEwUGSKlJFkYGpAlJSUlEshBiZG/gFkJgPJiGRghMJMUq5Rct+P9tbu2MtZ+xyd3nTW7Jz9XL7rWc/zW3uPGGVrZJTxGAJ1O5Fhhf67Ck3EcswsdzYHCzGp207L52/xDO/K3y/xGF9T/k09NBVHsQdjMxO3MfuGeziFy52OTUDXsalNhj5sz2Jf3b8TaD1u9pGgF9e1uFM5dgKdKc57by9R+/A5iYMpoBvY2EfwXlyvYXMK6CGWtYgapV7Twr7JNBp8dQroFWZlJvhRTuEOnMC8TL9Os6dYkgIKfcgd9e8128k4hAOY0BLsBeY2AYUIfmoRrA5UuYVohr5sbxHnTf1U6lM2raaoOfGagCq/kI/zWJER6ANCjH+tOtD4ouyfMwJUJqG44xL263AhEyhyxun8ATQGkSR3NQHFkZ3GttwghVK/x/RUU3/5y647c9SBppRNvb+Hpn6O+SmgaLAZmbuLiYyJ2lmU/Hh9UjL9K7NH5RvFH0cWfzzB4syAoUP3sSrTPmV2CzEEjUC3EQ05yHUJu1JAF7F7kDTFIB0u+vZYCmgLrgwYKO7Cuymg0KK47FYOCOoqttZzNb0xhibEvbQBoaLR5Av+MWBM6DkcKe6/j92AmnLHtRICVq3ZWISlJXBKsSv72Fjc6q/LF/wHHfF+Bx5+KHY7+mGFhhXqVoFuz0ddD/0ElehNJRg4qHwAAAAASUVORK5CYII="/></li>
-            </ul>
-            <ul class="nav-ul-2">
-                <li style="margin-left: 0px;"><a style=" color: #007bff;" href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Shop</a></li>
-                <li  style="margin-right: 170px;"><a href="/" ></a></li>
-                <li><a href="/">Pages</a></li>
-                <li><a href="/">News</a></li>
-                <li style="margin-right: 0px;"><a href="/">Contact</a></li>
-            </ul>
-            <img src="./Images/logo.png.webp" id="logo-nav" alt="">
-            <div class="nav-number">
-                1–688–688-94
-            </div>
-        </div>
+      <div id="inner-nav">
+        <ul class="nav-ul-1">
+          <li>
+            <img
+              width="27px"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAT1JREFUWEft1s8qRVEUx/HP9QAyk4F/r4CMjUyUifIMksLI1FgMJMkbKE8gTyCUJxBGlDAwU3JvuXXv7h5nn8692oO9h2uvs37f81vrnL0bEluNxHhkoLKO9NOhISxhFt94xxtecVEG0t7vF9AyDjFVIBytE534xxtu4KjEgWid6MQCwRncRrQjWic6sUD0GOspAV1hPgC6bg70Jm7wFQHblVLXoXtMB6JzkW3syVoX6BETQeUxPFd1pl+f/RPGM1CHA7uBG9sYDmIH+OyIveAktoVVZqiV2zoSqq5LLMY+9B9Ap80hX0sJaAd7KQGt4nwQQK2aC0Hhs+bAjgaxld9rRzt8h49BAYV1HzCZ0n8oA5W1PjuUHapydPRyK89QnqG6M7SFkcDG/eCCVuZy135doEpiMckZqMyl5Bz6AfsnPSV91uyVAAAAAElFTkSuQmCC"
+            />
+          </li>
+          <li>
+            <img
+              width="27px"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnRJREFUWEftlkuIjlEYx3/jtplcYjYKkctkN9KQhVBSSGFG0rAyU6SUQiEm5JbLUhZkYSMLScx27EhS00hNIqbJhrCRlMucfz1vTd+c9z3njPfNLL5TX99X3znP+Z3/c21gnK2GccZDHSjkkbpC/0OhxcBBYBWwFOgHngG37HfGNAlYArweCelz2UxgLXA/9BrP/yeAbmByztkO4BWwDjgAbAEGQkCHgMvAduBhAtRu4E7C/gsGP9Up+iU751PoHrAD+A1sBR5FXNIEvAFmROzVll7gq3PjXFPrexGQVJGUWn+Aa+77FPCj4LKdwN1ImGzbJ4uztyGXHXcxcK7G+CAgVz4wyNq75eLDCUCCWA+8rz3jc9kaF9RPcox/BG7bZ+TLbgJ7E4COAFd8+31AEwDFUVvgAkkuKH0WASsTgLoAPWLU8gFtAJ5b2is9q1ibgZ5YIKmzDfjg0nhhFTQuFlvcHX2xQJeAoxWByKxSfLqVlSiXif4lVDaaqAPkxmdetz/jXnCyIpU6ra95zReNH8oEpea0EsG+ueyaY25LBtoITAFUhXeVBHXWqn6uuSKFlgMvSgLJgnk+8LnIZmhivA7sLwlKKgf7XQhI/1+1PvYvXDdiHxYCyiBaAc07y4DViWSPLc1/xpyLBZoI7HO16TQwK8aw7ZGL9gC/Ys8UAWnmnWdl/jzQHGvUTYJ/XYbqjGqZfkevWqBN1jYWWL1Q509d6oEK4KepB7Xfp5CUOOaG8XY3WzcmGNXwrrZwMTBdFposcpmKosYPzTkrANWQ2QapSe+dTXzq2grcoQT4MRXGMuwn24jNsmTDYz1QBwopV1copNAwPqtfJYPlU7sAAAAASUVORK5CYII="
+            />
+          </li>
+          <li>
+            <img
+              width="27px"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA5hJREFUWEftl1moTmEUhp9jDLkhY5RkJlNJpAyRKbkwS5JQppKhkHmIEJIhUxKZiVKEkDKFzFMoRRQukczfq7X1+c7+996/38W5sOp0zv/t9a39nrXe9a71F1HCrKiE4eE/oLSK5JOhFkAboB5QOi2wPf8GPAduAvey3MkCaBiwCGiQJWCCzxNgDnAgKU4SoFrATqBHgUDC66dd1kYBr+LiJgE6CfS0S5eAHcANS/2XjCDLA62A9sAEoIndOwH0yQfQAOCQXZgNLMsIIMmtHLAWGG9OA4HD4YVcGVK9xRnVe0gBYLoCw4EawHHL8nWgJfDYy9jvV8QBagbcN4/OwIUCAE0E1gdlGgHssrO6wEs/fhwgv1xKcy6+VAamAR2A1sAP4BZwBVgJfLDs7rMXqkFEZmVeFZD1s8wlZkg13gi8A6rlyE5368DaOZ6/AEYC511pJBvVLetnHNhKwHu7pwzqXYmAZgArgKdAw5gXdgHOeedngTtAGcc5lbub96yTk42LQQxV5budzQKWpwGaa0J418jn+6tMD4A6lkERVrrim6RiD1DFVLo58DHw+WpqP8/9XpwGaIHjw3xA3dAuCDQG2Gpn0hHpSZyppQ/aA5UuInHkK14qo5kALTRHkVOE9W07MNoJ5mWgYw4w0bHml8i+yUTRd//ktE2imQmQ5pbKdtsC+oEemnaolSenANoCjM0RRx1Y0aihavy2uLaPSvYIaBq8VGeNXfdtcByalAJos5tX44xz4pFv6jJ1m/ijLGUCJPKGgfYCQ01rwnKG+KRJmmPij3jkm0hewR3onxdF/hrQTG+uFRM1L+5gl9399nkqsCYA9Bkoa9RYkgZINRXyuJLVtGlfFXjrtEpj4FTwst5OjXdb27826ZDIRlbKAdHiJis2uOM4JKelwLMcS1mvoN2ThFEi6YuoQIjMIrVMo2d1Wob+9egIueWPDu1IkoVEDvV37X7UhqW0Imm4asxo+dKurXEQDtcQjD7Xt+zrbw3yI2mAtNVJb2SFrh9xgPz1Q18colXnl2/agibCRmtsXPB8zzQurpngvrHF7Y8YuQD19fYU6YR+tO8UYuEKG7saJy35Wl8HGYKrbsJvsyVfW4CmdRaLlnwN6Sle1ypG27g4SYDUnqu8pTwLgCw+2gLUXb42JXZZGFQcWud2nEZZ3pbgo4VvuuvIY0lxsnxzje6XmK/SBSYmv+v5ZCi/yH/p/R9QWuJ+ArGquSWsrGisAAAAAElFTkSuQmCC"
+            />
+          </li>
+          <li>
+            <img
+              width="27px"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAiBJREFUWEft18vLTVEYx/HP6xpyn7gkoTBhIjEwUGSKlJFkYGpAlJSUlEshBiZG/gFkJgPJiGRghMJMUq5Rct+P9tbu2MtZ+xyd3nTW7Jz9XL7rWc/zW3uPGGVrZJTxGAJ1O5Fhhf67Ck3EcswsdzYHCzGp207L52/xDO/K3y/xGF9T/k09NBVHsQdjMxO3MfuGeziFy52OTUDXsalNhj5sz2Jf3b8TaD1u9pGgF9e1uFM5dgKdKc57by9R+/A5iYMpoBvY2EfwXlyvYXMK6CGWtYgapV7Twr7JNBp8dQroFWZlJvhRTuEOnMC8TL9Os6dYkgIKfcgd9e8128k4hAOY0BLsBeY2AYUIfmoRrA5UuYVohr5sbxHnTf1U6lM2raaoOfGagCq/kI/zWJER6ANCjH+tOtD4ouyfMwJUJqG44xL263AhEyhyxun8ATQGkSR3NQHFkZ3GttwghVK/x/RUU3/5y647c9SBppRNvb+Hpn6O+SmgaLAZmbuLiYyJ2lmU/Hh9UjL9K7NH5RvFH0cWfzzB4syAoUP3sSrTPmV2CzEEjUC3EQ05yHUJu1JAF7F7kDTFIB0u+vZYCmgLrgwYKO7Cuymg0KK47FYOCOoqttZzNb0xhibEvbQBoaLR5Av+MWBM6DkcKe6/j92AmnLHtRICVq3ZWISlJXBKsSv72Fjc6q/LF/wHHfF+Bx5+KHY7+mGFhhXqVoFuz0ddD/0ElehNJRg4qHwAAAAASUVORK5CYII="
+            />
+          </li>
+        </ul>
+        <ul class="nav-ul-2">
+          <li style="margin-left: 0px">
+            <a style="color: #007bff" href="/">Home</a>
+          </li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Shop</a></li>
+          <li style="margin-right: 170px"><a href="/"></a></li>
+          <li><a href="/">Pages</a></li>
+          <li><a href="/">News</a></li>
+          <li style="margin-right: 0px"><a href="/">Contact</a></li>
+        </ul>
+        <img src="./Images/logo.png.webp" id="logo-nav" alt="" />
+        <div class="nav-number">1–688–688-94</div>
+      </div>
     </nav>
-<!-- NAVBAR END -->
-<main>
-    <section class="services">
+    <!-- NAVBAR END -->
+    <main>
+      <section class="services">
         <div class="service">
-            <div class="service-title">
-                <span id="our-services">Our services</span>
-                <h2 id="what-we-offer">What We Can Offer You</h2>
-            </div>
-            <div class="qoute">
-                <button id="get-qoute">GET A QOUTE</button>
-            </div>
+          <div class="service-title">
+            <span id="our-services">Our services</span>
+            <h2 id="what-we-offer">What We Can Offer You</h2>
+          </div>
+          <div class="qoute">
+            <button id="get-qoute">GET A QOUTE</button>
+          </div>
         </div>
         <div class="cards">
-            <div class="card" style="margin-left: 0px;">
-                <div><img id="img-service" src="./Images/services-1.jpg.webp" alt="services"></div>
-                <div class="card-content">
-                    <h4>Maintenace & repair</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                    <a href="#">More info</a>
-                </div>
-                <div class="yellow-box-1">
-                </div>
+          <div class="card" style="margin-left: 0px">
+            <div>
+              <img
+                id="img-service"
+                src="./Images/services-1.jpg.webp"
+                alt="services"
+              />
             </div>
-            <div class="card" >
-                <div><img id="img-service" src="./Images/services-7.jpg.webp" alt="services"></div>
-                <div class="card-content">
-                    <h4>Heating & water</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                    <a href="#">More info</a>
-                </div>
-                <div class="yellow-box-2">
-                </div>
+            <div class="card-content">
+              <h4>Maintenace & repair</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </p>
+              <a href="#">More info</a>
             </div>
+            <div class="yellow-box-1"></div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                id="img-service"
+                src="./Images/services-7.jpg.webp"
+                alt="services"
+              />
+            </div>
+            <div class="card-content">
+              <h4>Heating & water</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </p>
+              <a href="#">More info</a>
+            </div>
+            <div class="yellow-box-2"></div>
+          </div>
 
-            <div class="card" style="margin-right: 0px;">
-                <div><img id="img-service" src="./Images/services-3.jpg.webp" alt="services"></div>
-                <div class="card-content">
-                    <h4>Cleaning & Optimization</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                    <a href="#">More info</a>
-                </div>
-                <div class="yellow-box-3">
-                </div>
+          <div class="card" style="margin-right: 0px">
+            <div>
+              <img
+                id="img-service"
+                src="./Images/services-3.jpg.webp"
+                alt="services"
+              />
             </div>
+            <div class="card-content">
+              <h4>Cleaning & Optimization</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </p>
+              <a href="#">More info</a>
+            </div>
+            <div class="yellow-box-3"></div>
+          </div>
         </div>
-    </section>
-    <div class="quote">
-      <div class="container">
-        <div class="main-block">
-          <div class="form_quote">
-            <h2>Get a Quote</h2>
-            <form>
-              <div class="first">
-                <div class="row"><input type="text" placeholder="Name" /></div>
-                <div class="row">
-                  <input type="number" placeholder="Phone" />
+      </section>
+
+      <!-- QOUTE SECTION-->
+
+      <div class="quote">
+        <div class="container">
+          <div class="main-block">
+            <div class="form_quote">
+              <h2>Get a Quote</h2>
+              <form>
+                <div class="first">
+                  <div class="row">
+                    <input type="text" placeholder="Name" />
+                  </div>
+                  <div class="row">
+                    <input type="number" placeholder="Phone" />
+                  </div>
                 </div>
+                <div class="second">
+                  <div class="row">
+                    <input type="email" placeholder="Email" />
+                  </div>
+                  <div class="row">
+                    <select>
+                      <option>Choose services</option>
+                      <option class="a">clean</option>
+                      <option class="a">Repair</option>
+                      <option class="a">Heating</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <div class="bottom-text">
+                    <textarea placeholder="message"></textarea>
+                  </div>
+                  <div class="side-btn">
+                    <button type="submit">Get a Quote</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="get-video">
+          <img src="./Images/child.png" alt="video loading" />
+        </div>
+      </div>
+
+      <!-- TESTIMONIAL section -->
+
+      <div class="testimonial">
+        <div class="heading">
+          <h3>testimonial</h3>
+        </div>
+        <div class="subheading">
+          <h1>What Cilents Say?</h1>
+        </div>
+        <div class="main-body">
+          <div class="container">
+            <div class="card-container">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni,
+                repudiandae quibusdam perferendis neque soluta voluptatum
+                sapiente odit obcaecati
+              </p>
+            </div>
+            <div class="base-card">
+              <div class="user-image">
+                <img src="./Images/user1.png" alt="user" />
               </div>
-              <div class="second">
-                <div class="row">
-                  <input type="email" placeholder="Email" />
-                </div>
-                <div class="row">
-                  <select>
-                    <option>Choose services</option>
-                    <option class="a">clean</option>
-                    <option class="a">Repair</option>
-                    <option class="a">Heating</option>
-                  </select>
-                </div>
+              <div class="username">
+                <h4>sophie Jefferson</h4>
+                <p>Swindon ,England</p>
               </div>
-              <div>
-                <div class="bottom-text">
-                  <textarea placeholder="message"></textarea>
-                </div>
-                <div class="side-btn">
-                  <button type="submit">Get a Quote</button>
-                </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="card-container">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni,
+                repudiandae quibusdam perferendis neque soluta voluptatum
+                sapiente odit obcaecati
+              </p>
+            </div>
+            <div class="base-card">
+              <div class="user-image">
+                <img src="./Images/user2.png" alt="user" />
               </div>
-            </form>
+              <div class="username">
+                <h4>Cynthia Moore</h4>
+                <p>Kansan USA</p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="card-container">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni,
+                repudiandae quibusdam perferendis neque soluta voluptatum
+                sapiente odit obcaecati
+              </p>
+            </div>
+            <div class="base-card">
+              <div class="user-image">
+                <img src="./Images/user3.png" alt="user" />
+              </div>
+              <div class="username">
+                <h4>Andre Curtis</h4>
+                <p>Dresden ,Germany</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="get-video">
-        <img src="./Images/child.png" alt="video loading" >
-      </div>
-    </div>
-</main>
-</body>
+    </main>
+  </body>
 </html>
