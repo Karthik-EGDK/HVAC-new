@@ -1,10 +1,11 @@
-@mixin yellow-box-img(){
-    height: 70px;
-    width: 80px;
-    position: absolute;
-    top: 35%;
-    left: 38%;
-    transition-duration: 300ms;
+@import "./assignment.scss";
+@mixin yellow-box-img() {
+  height: 70px;
+  width: 80px;
+  position: absolute;
+  top: 35%;
+  left: 38%;
+  transition-duration: 300ms;
 }
 
 .nav {
@@ -38,8 +39,8 @@
           text-decoration: none;
           color: black;
           transition-duration: 300ms;
-          &:hover{
-            color:#007bff;
+          &:hover {
+            color: #007bff;
           }
           font-weight: 600;
           font-size: larger;
@@ -113,85 +114,84 @@
       }
     }
   }
-  .cards{
+  .cards {
     padding: 30px 0px;
-    .card{
-        display: inline-block;
-        width: 30%;
-        margin: 0px 25px;
-        position: relative;
-        background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        #img-service{
-            width: 100%;
-            object-fit: contain;
+    .card {
+      display: inline-block;
+      width: 30%;
+      margin: 0px 25px;
+      position: relative;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      #img-service {
+        width: 100%;
+        object-fit: contain;
+      }
+      .card-content {
+        text-align: center;
+        padding: 25px 25px 35px;
+        h4 {
+          font-family: "Saira Condensed", sans-serif;
+          color: #142336;
+          font-size: 26px;
+          font-weight: 600;
+          margin-bottom: 12px;
         }
-        .card-content{
-            text-align: center;
-            padding: 25px 25px 35px;
-            h4{
-                font-family: "Saira Condensed", sans-serif;
-                color: #142336;
-                font-size: 26px;
-                font-weight: 600;
-                margin-bottom: 12px;
-            }
-            p{
-                color: #777777;
-                // margin-bottom: 12px;
-                font-size: 16px;
-                line-height: 27px;
-                
-                margin:0 0 15px 0;
-            }
-            a{
-                font-family: "Saira Condensed", sans-serif;
-                color: black;
-            }
+        p {
+          color: #777777;
+          // margin-bottom: 12px;
+          font-size: 16px;
+          line-height: 27px;
+
+          margin: 0 0 15px 0;
         }
-        
-            .yellow-box-1{
-                @include yellow-box-img();
-                background-image: url("../Images/Repair\ Icon\ Before.png");
-                background-size: cover;
-                // background: #FAD110;
-                // color: #142336;
-                &:hover{
-                    background-image: url("../Images/Repair\ Icon\ After.png");
-                    background-size: cover;
-                }
-            }
+        a {
+          font-family: "Saira Condensed", sans-serif;
+          color: black;
+        }
+      }
 
-            .yellow-box-2{
-                @include yellow-box-img();
-                background-image: url("../Images/Repair\ Icon\ Before.png");
-                background-size: cover;
-                // background: #FAD110;
-                // color: #142336;
-                &:hover{
-                    background-image: url("../Images/Repair\ Icon\ After.png");
-                    background-size: cover;
-                }
-            }
+      .yellow-box-1 {
+        @include yellow-box-img();
+        background-image: url("../Images/Repair\ Icon\ Before.png");
+        background-size: cover;
+        // background: #FAD110;
+        // color: #142336;
+        &:hover {
+          background-image: url("../Images/Repair\ Icon\ After.png");
+          background-size: cover;
+        }
+      }
 
-            .yellow-box-3{
-                @include yellow-box-img();
-                background-image: url("../Images/Repair\ Icon\ Before.png");
-                background-size: cover;
-                // background: #FAD110;
-                // color: #142336;
-                &:hover{
-                    background-image: url("../Images/Repair\ Icon\ After.png");
-                    background-size: cover;
-                }
-            }
-            
-            // .yellow-triangle{
-            //     border-left: 40px solid transparent;
-            //     border-right: 40px solid transparent;
-            //     border-top: 12px solid #FAD110;
-            // }
-        
+      .yellow-box-2 {
+        @include yellow-box-img();
+        background-image: url("../Images/Repair\ Icon\ Before.png");
+        background-size: cover;
+        // background: #FAD110;
+        // color: #142336;
+        &:hover {
+          background-image: url("../Images/Repair\ Icon\ After.png");
+          background-size: cover;
+        }
+      }
+
+      .yellow-box-3 {
+        @include yellow-box-img();
+        background-image: url("../Images/Repair\ Icon\ Before.png");
+        background-size: cover;
+        // background: #FAD110;
+        // color: #142336;
+        &:hover {
+          background-image: url("../Images/Repair\ Icon\ After.png");
+          background-size: cover;
+        }
+      }
+
+      // .yellow-triangle{
+      //     border-left: 40px solid transparent;
+      //     border-right: 40px solid transparent;
+      //     border-top: 12px solid #FAD110;
+      // }
     }
   }
 }
