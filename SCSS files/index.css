@@ -134,17 +134,45 @@
   font-family: "Saira Condensed", sans-serif;
   color: black;
 }
-.services .cards .card .yellow-box {
+.services .cards .card .yellow-box-1 {
   height: 70px;
   width: 80px;
-  background-image: url("../Images/Repair Icon Before.png");
-  background-size: cover;
   position: absolute;
   top: 35%;
   left: 38%;
   transition-duration: 300ms;
+  background-image: url("../Images/Repair Icon Before.png");
+  background-size: cover;
 }
-.services .cards .card .yellow-box:hover {
+.services .cards .card .yellow-box-1:hover {
+  background-image: url("../Images/Repair Icon After.png");
+  background-size: cover;
+}
+.services .cards .card .yellow-box-2 {
+  height: 70px;
+  width: 80px;
+  position: absolute;
+  top: 35%;
+  left: 38%;
+  transition-duration: 300ms;
+  background-image: url("../Images/Repair Icon Before.png");
+  background-size: cover;
+}
+.services .cards .card .yellow-box-2:hover {
+  background-image: url("../Images/Repair Icon After.png");
+  background-size: cover;
+}
+.services .cards .card .yellow-box-3 {
+  height: 70px;
+  width: 80px;
+  position: absolute;
+  top: 35%;
+  left: 38%;
+  transition-duration: 300ms;
+  background-image: url("../Images/Repair Icon Before.png");
+  background-size: cover;
+}
+.services .cards .card .yellow-box-3:hover {
   background-image: url("../Images/Repair Icon After.png");
   background-size: cover;
 }/*# sourceMappingURL=index.css.map */
