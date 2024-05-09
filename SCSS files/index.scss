@@ -1,0 +1,169 @@
+.nav {
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  font-family: "Saira Condensed", sans-serif;
+  #inner-nav {
+    padding: 25px 5px;
+    // background-color: aqua;
+    .nav-ul-1 {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      padding-inline-start: 15px;
+      li {
+        display: inline;
+        cursor: pointer;
+        margin: 0 10px 0px 0px;
+      }
+    }
+
+    .nav-ul-2 {
+      margin: 0 6%;
+      display: inline-block;
+      width: auto;
+      li {
+        display: inline;
+        margin: 0 15px;
+        a {
+          text-decoration: none;
+          color: black;
+          transition-duration: 300ms;
+          &:hover{
+            color:#007bff;
+          }
+          font-weight: 600;
+          font-size: larger;
+          text-transform: uppercase;
+        }
+      }
+    }
+    #logo-nav {
+      background-color: #142336;
+      padding: 36px;
+      position: absolute;
+      left: 515px;
+      cursor: pointer;
+      top: 0px;
+    }
+    .nav-number {
+      font-family: "Mulish", sans-serif;
+      padding: 10px 20px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #4586d5;
+      border: 2px solid #fad110;
+      width: auto;
+      display: inline-block;
+    }
+  }
+}
+
+// main{
+//     margin: auto;
+// }
+.services {
+  font-family: "Mulish", sans-serif;
+  padding: 0px 50px;
+  .service {
+    .service-title {
+      width: 50%;
+      display: inline-block;
+      #our-services {
+        font-size: 18px;
+        color: #4586d5;
+        font-weight: 700;
+        letter-spacing: 2px;
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      #what-we-offer {
+        font-family: "Saira Condensed", sans-serif;
+        font-size: 40px;
+        color: #142336;
+        font-weight: 600;
+        margin: 0px;
+      }
+    }
+    .qoute {
+      width: 49%;
+      display: inline-block;
+
+      #get-qoute {
+        float: right;
+        font-family: "Saira Condensed", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 14px 36px 12px;
+        border: 2px solid #fad110;
+        color: #4586d5;
+        background: transparent;
+      }
+    }
+  }
+  .cards{
+    padding: 30px 0px;
+    .card{
+        display: inline-block;
+        width: 30%;
+        margin: 0px 25px;
+        position: relative;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        #img-service{
+            width: 100%;
+            object-fit: contain;
+        }
+        .card-content{
+            text-align: center;
+            padding: 25px 25px 35px;
+            h4{
+                font-family: "Saira Condensed", sans-serif;
+                color: #142336;
+                font-size: 26px;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+            p{
+                color: #777777;
+                // margin-bottom: 12px;
+                font-size: 16px;
+                line-height: 27px;
+                
+                margin:0 0 15px 0;
+            }
+            a{
+                font-family: "Saira Condensed", sans-serif;
+                color: black;
+            }
+        }
+        
+            .yellow-box{
+                height: 70px;
+                width: 80px;
+                background-image: url("../Images/Repair\ Icon\ Before.png");
+                background-size: cover;
+                position: absolute;
+                top: 35%;
+                left: 38%;
+                transition-duration: 300ms;
+                // background: #FAD110;
+                // color: #142336;
+                &:hover{
+                    background-image: url("../Images/Repair\ Icon\ After.png");
+                    background-size: cover;
+                }
+            }
+            
+            // .yellow-triangle{
+            //     border-left: 40px solid transparent;
+            //     border-right: 40px solid transparent;
+            //     border-top: 12px solid #FAD110;
+            // }
+        
+    }
+  }
+}
