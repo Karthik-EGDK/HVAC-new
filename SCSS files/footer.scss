@@ -1,0 +1,246 @@
+/*footer {
+    background: #142336;
+ 
+    .scontainer {
+        padding: 70px 50px;
+        color: white;
+    }
+ 
+    .box {
+        float: left;
+    }
+ 
+    h4 {
+        margin: 0;
+        color: white;
+        font-weight: 400;
+        font-family: "Saira Condensed", sans-serif;
+        font-size: 24px;
+    }
+ 
+    h1 {
+        margin: 15px 0 10px 0;
+        font-size: large;
+    }
+ 
+    li,
+    p {
+        color: gray;
+        margin: 15px 0 10px 0;
+    }
+ 
+    input {
+        padding: 15px;
+        background: none;
+        border: 1px solid gray;
+        color: gray;
+ 
+        .input {
+            background-color: #142336;
+            margin-bottom: 20px;
+        }
+    }
+ 
+    .social_media i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        /*border-radius: 50%;
+        border: 1px solid gray;
+        color: gray;
+        text-align: center;
+        margin-right: 5px;
+        margin-top: 20px;
+    }
+ 
+    button {
+        border: none;
+        display: inline-block;
+        padding: 14px 30px;
+        background: #FAD110;
+        font-size: 16px;
+        font-family: "Saira Condensed", sans-serif;
+        color: #142336;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+ 
+    .flex1 {
+        display: flex;
+        justify-content: space-between;
+    }
+ 
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+}*/
+
+footer {
+  position: relative;
+  height: 70vh;
+  background-color: #142336;
+  transform: translateY(115%);
+
+  table {
+    position: absolute;
+    border: 2px solid;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top: 1;
+    .box {
+      
+      width: 250px;
+      position: relative;
+    }
+
+    td {
+      padding: 0px;
+      margin-right: 10px;
+      font-size: 15px;
+      color: #c4c4c4;
+
+      &.Quick {
+        width: 17%;
+      }
+
+      &.new {
+        width: 17%;
+        .slo-idea2 {
+          margin-top: 20px;
+        }
+        .head3 {
+          h4 {
+            display: inline-flex;
+            margin: 0;
+            color: white;
+            font-size: 24px;
+            line-height: 130px;
+          }
+        }
+
+        .slo-idea1,
+        .slo-idea2 {
+          img {
+            float: left;
+          }
+
+          span {
+            font-size: 14px;
+            padding: 0 60px 20px 90px;
+          }
+          h5 {
+            padding-left: 30px;
+            overflow: hidden;
+            font-size: 20px;
+            color: #c4c4c4;
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      &.Contact {
+        width: 10%;
+      }
+
+      &.subs {
+        width: 20%;
+      }
+
+      .head4 {
+        h4 {
+          display: inline;
+          margin: 0;
+          color: white;
+          font-size: 24px;
+          line-height: 110px;
+          vertical-align: top;
+        }
+      }
+
+      input[type="email"] {
+        font-size: 15px;
+        color: #b5b5b5;
+        padding-left: 20px;
+        height: 46px;
+        width: 80%;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+    }
+
+    .right-ul {
+      float: left;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .left-ul {
+      span {
+        display: inline;
+        clear: both;
+      }
+
+      float: right;
+      text-align: start;
+      margin: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 15px;
+      }
+    }
+
+    .social_media {
+      margin-top: 10px;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    button {
+      border: none;
+      padding: 14px 3px;
+      background: #fad110;
+      font-size: 16px;
+      font-family: "Saira Condensed", sans-serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      height: 55px;
+      width: 150px;
+    }
+  }
+}
+
+/*.footer
+{
+    background: #142336;
+    .footer__call{
+        position: relative;
+        top: -65px;
+    }
+    .container{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15PX;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .footer__call__content{
+        background: #4586d5;
+        padding: 30px 55px 25px 45px;
+    }
+}
+*/
